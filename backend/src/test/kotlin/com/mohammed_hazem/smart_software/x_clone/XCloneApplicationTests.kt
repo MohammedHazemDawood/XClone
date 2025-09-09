@@ -1,4 +1,4 @@
-package com.mohammed_hazem.smart_software.XClone
+package com.mohammed_hazem.smart_software.x_clone
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
