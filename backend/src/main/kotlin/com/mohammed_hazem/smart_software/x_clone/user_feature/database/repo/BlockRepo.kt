@@ -8,4 +8,5 @@ import org.springframework.data.mongodb.repository.MongoRepository
 
 interface BlockRepo : MongoRepository<Block, ObjectId> {
     fun findAllByBlockerOrderBySinceDesc(blocker: ObjectId, pageable: Pageable): Page<Block>
+    fun existsByBlockerAndBlocked(blocker: ObjectId, blocked: ObjectId)
 }

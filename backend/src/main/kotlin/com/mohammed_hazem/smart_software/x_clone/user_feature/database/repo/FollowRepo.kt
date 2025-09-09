@@ -9,4 +9,6 @@ import org.springframework.data.mongodb.repository.MongoRepository
 interface FollowRepo : MongoRepository<Follow, ObjectId> {
     fun findAllByFollowerOrderBySinceDesc(follower : ObjectId, pageable: Pageable) : Page<Follow>
     fun findAllByFollowedOrderBySinceDesc(followed : ObjectId, pageable: Pageable) : Page<Follow>
+
+    fun existsByFollowerAndFollowed(follower: ObjectId, followed: ObjectId)
 }

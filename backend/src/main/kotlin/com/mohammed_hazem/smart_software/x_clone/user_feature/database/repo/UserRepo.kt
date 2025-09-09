@@ -5,5 +5,5 @@ import org.bson.types.ObjectId
 import org.springframework.data.mongodb.repository.MongoRepository
 
 interface UserRepo : MongoRepository<User, ObjectId> {
-
+    fun existsByEmail(email: String): Boolean
 }
